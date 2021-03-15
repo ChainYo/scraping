@@ -12,7 +12,7 @@ services:
       - ./json_files:/app/json_files
     depends_on: 
       - influxdb
-      - standalone-chromium
+      - chrome
   chrome:
     image: kynetiv/selenium-standalone-chromium-pi
     container_name: chrome

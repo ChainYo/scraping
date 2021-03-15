@@ -12,6 +12,13 @@ services:
       - ./json_files:/app/json_files
     depends_on: 
       - influxdb
+      - standalone-chromium
+  standalone-chromium:
+    image: kynetiv/selenium-standalone-chromium-pi
+    container_name: standalone-chromium
+    restart: always
+    depends_on: 
+      - influxdb
   buffer:
     image: buffer:1.0
     build:

@@ -13,12 +13,11 @@ services:
     depends_on: 
       - influxdb
       - standalone-chromium
-  standalone-chromium:
+  chrome:
     image: kynetiv/selenium-standalone-chromium-pi
-    container_name: standalone-chromium
+    container_name: chrome
+    hostname: chrome
     restart: always
-    ports:
-      - "5902:4444"
     depends_on: 
       - influxdb
   buffer:

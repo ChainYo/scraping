@@ -1,4 +1,5 @@
 from selenium import webdriver
+from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 
 from time import sleep
 from datetime import datetime
@@ -12,7 +13,10 @@ chrome_options.add_argument('--no-sandbox')
 chrome_options.add_argument('--disable-dev-shm-usage')
 chrome_options.add_argument('--disable-gpu')
 
-driver = webdriver.Remote(command_executor="http://0.0.0.0:5902/wd/hub", options=chrome_options)
+driver = webdriver.Remote(
+    command_executor="http://chrome:4444/wd/hub", 
+    desired_capabilities=DesiredCapabilities.CHROME,
+    options=chrome_options)
 driver.get("https://www.coincap.io")
 
 sleep(3)

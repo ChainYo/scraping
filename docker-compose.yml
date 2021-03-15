@@ -41,6 +41,8 @@ services:
       - "8086:8086"
     volumes:
       - influxdbv2:/.influxdbv2
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
   influxdb_cli:
     links:
       - influxdb

@@ -26,7 +26,7 @@ services:
     depends_on: 
       - influxdb
   influxdb:
-    image: influxdb
+    image: hypriot/rpi-influxdb
     container_name: influxdb
     restart: always
     ports:
@@ -36,7 +36,7 @@ services:
   influxdb_cli:
     links:
       - influxdb
-    image: influxdb
+    image: hypriot/rpi-influxdb
     container_name: influxdb_cli
     entrypoint: influx setup --bucket ${INFLUXDB_V2_BUCKET} -t ${INFLUXDB_V2_TOKEN} -o ${INFLUXDB_V2_ORG} --username=${INFLUXDB_USERNAME} --password=${INFLUXDB_PASSWORD} --host=http://influxdb:8086 -f
     restart: on-failure:10

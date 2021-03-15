@@ -38,7 +38,7 @@ services:
     container_name: influxdb
     restart: always
     ports:
-      - "8086:8086"
+      - "127.0.0.1:8086:8086"
     volumes:
       - influxdbv2:/.influxdbv2
     extra_hosts:

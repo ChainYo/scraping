@@ -17,6 +17,8 @@ services:
     image: kynetiv/selenium-standalone-chromium-pi
     container_name: standalone-chromium
     restart: always
+    ports:
+      - "5902:4444"
     depends_on: 
       - influxdb
   buffer:

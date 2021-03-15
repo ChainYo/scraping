@@ -12,7 +12,7 @@ chrome_options.add_argument('--no-sandbox')
 chrome_options.add_argument('--disable-dev-shm-usage')
 chrome_options.add_argument('--disable-gpu')
 
-driver = webdriver.Remote(command_executor="http://standalone-chromium:4444", options=chrome_options)
+driver = webdriver.Remote(command_executor="http://standalone-chromium:4444/wd/hub", options=chrome_options)
 driver.get("https://www.coincap.io")
 
 sleep(3)

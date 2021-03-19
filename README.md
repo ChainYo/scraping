@@ -61,7 +61,7 @@ Finally, you can obtain this kind of graphs after 10 to 15 minutes of scraping (
 
 - **Selenium**: Fast and easy to scrape the datas you need.
 
-- **InfluxDB**: I didn't know anything about this database but it seems to be good for TimeSeries datas. I chose to use it in combination with Grafana, but I saw `InfluxDB` has already some data visualization tools included. So, it was a good call to learn using it.
+- **InfluxDB**: I didn't know anything about this database but it seemed to be good for TimeSeries datas. I chose to use it in combination with Grafana, but I saw `InfluxDB` had already some data visualization tools included. So, it was a good call to learn using it.
 
 ---
 
